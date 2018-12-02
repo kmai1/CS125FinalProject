@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CS125 Final Project</string>
+    <string name="add_food">Add Food</string>
 </resources>
