@@ -39,8 +39,8 @@ public class mainScreen extends AppCompatActivity {
             public void run() {
                 listOfFoods.add(new Food(100,1.0,1.0,1.0));
                 updateCalories();
-                updateCarbs();
                 updateFat();
+                updateCarbs();
                 updateProtein();
                 TextView totalCaloriesText = findViewById(R.id.totalCalories);
                 totalCaloriesText.setText("Total Calories:    " + Integer.toString(totalCalories));

@@ -30,7 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/totalCalories"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="1dp"
         android:layout_marginTop="82dp"
         android:text="Total Carbs"
         android:textSize="30dp" />
