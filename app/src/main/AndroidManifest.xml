@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".foodScreen"
+            android:name=".addFoodScreen"
             android:label="Add your food"/>
     </application>
 
