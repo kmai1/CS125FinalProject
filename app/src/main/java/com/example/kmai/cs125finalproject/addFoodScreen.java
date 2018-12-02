@@ -3,6 +3,7 @@ package com.example.kmai.cs125finalproject;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,16 +31,26 @@ public class addFoodScreen extends AppCompatActivity {
                 int inputtedCalories;
                 double inputtedCarbs, inputtedFats, inputtedProtein;
                 EditText calories = findViewById(R.id.inputCalories);
-                inputtedCalories = Integer.parseInt(calories.getText().toString());
                 EditText carbs = findViewById(R.id.inputCarbs);
-                inputtedCarbs = Double.parseDouble(carbs.getText().toString());
                 EditText fats = findViewById(R.id.inputFat);
-                inputtedFats = Double.parseDouble(fats.getText().toString());
                 EditText protein = findViewById(R.id.inputProtein);
-                inputtedProtein = Double.parseDouble(protein.getText().toString());
-                Food createdFood = new Food(inputtedCalories,inputtedCarbs,inputtedFats,inputtedProtein);
-                mainScreen.addListOfFoods(createdFood);
-                switchToMainScreen();
+                if (TextUtils.isEmpty(calories.getText())) {
+                    calories.setError("CALORIES REQUIRED");
+                } else if (TextUtils.isEmpty(carbs.getText())) {
+                    carbs.setError("CARBS REQUIRED");
+                } else if (TextUtils.isEmpty(fats.getText())) {
+                    fats.setError("FATS REQUIRED");
+                } else if (TextUtils.isEmpty(protein.getText())) {
+                    protein.setError("PROTEIN REQUIRED");
+                } else {
+                    inputtedCalories = Integer.parseInt(calories.getText().toString());
+                    inputtedCarbs = Integer.parseInt(carbs.getText().toString());
+                    inputtedFats = Double.parseDouble(fats.getText().toString());
+                    inputtedProtein = Double.parseDouble(protein.getText().toString());
+                    Food createdFood = new Food(inputtedCalories,inputtedCarbs,inputtedFats,inputtedProtein);
+                    mainScreen.addListOfFoods(createdFood);
+                    switchToMainScreen();
+                }
             }
         });
 

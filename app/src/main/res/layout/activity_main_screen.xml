@@ -7,15 +7,6 @@
     tools:context=".mainScreen">
 
     <TextView
-        android:id="@+id/mainScreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="188dp"
-        android:text="@string/mainscreen" />
-
-    <TextView
         android:id="@+id/totalCalories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -46,13 +46,13 @@ public class mainScreen extends AppCompatActivity {
                 totalCaloriesText.setText("Total Calories:    " + Integer.toString(totalCalories));
 
                 TextView totalCarbsText = findViewById(R.id.totalCarbs);
-                totalCarbsText.setText("Total Carbs:    " + Double.toString(totalCarbs));
+                totalCarbsText.setText("Total Carbs:    " + Double.toString(totalCarbs) + "g");
 
                 TextView totalFatsText = findViewById(R.id.totalFats);
-                totalFatsText.setText("Total Fat:    " + Double.toString(totalFats));
+                totalFatsText.setText("Total Fat:    " + Double.toString(totalFats) + "g");
 
                 TextView totalProteinText = findViewById(R.id.totalProtein);
-                totalProteinText.setText("Total Protein:     " + Double.toString(totalProtein));
+                totalProteinText.setText("Total Protein:     " + Double.toString(totalProtein) + "g");
 
                 handler.postDelayed(this, 100);
             }

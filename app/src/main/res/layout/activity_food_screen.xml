@@ -8,18 +8,18 @@
 
     <EditText
         android:id="@+id/inputCalories"
-        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/foodScreen"
         android:layout_alignBottom="@+id/enterCalories"
+        android:layout_marginLeft="300dp"
+        android:inputType="number"
         android:textSize="30sp" />
     <EditText
         android:id="@+id/inputCarbs"
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/foodScreen"
+        android:layout_alignEnd="@+id/inputCalories"
         android:layout_alignBottom="@+id/enterCarb"
         android:textSize="30sp" />
     <EditText
@@ -27,7 +27,7 @@
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/foodScreen"
+        android:layout_alignEnd="@+id/inputCalories"
         android:layout_alignBottom="@+id/enterFats"
         android:textSize="30sp" />
     <EditText
@@ -35,17 +35,9 @@
         android:inputType="numberDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/foodScreen"
+        android:layout_alignEnd="@+id/inputCalories"
         android:layout_alignBottom="@+id/enterProtein"
         android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/foodScreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="foodScreen"/>
 
     <TextView
         android:id="@+id/enterCalories"
