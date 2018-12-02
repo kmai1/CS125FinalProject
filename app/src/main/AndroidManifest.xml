@@ -21,7 +21,10 @@
         </activity>
         <activity
             android:name=".addFoodScreen"
-            android:label="Add your food"/>
+            android:label="Add your food" />
+        <activity
+            android:name=".customFoodScreen"
+            android:label="Custom Food"></activity>
     </application>
 
 </manifest>

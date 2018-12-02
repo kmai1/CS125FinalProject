@@ -10,18 +10,58 @@
         android:id="@+id/mainScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="188dp"
-        android:text="mainScreen" />
+        android:text="@string/mainscreen" />
+
+    <TextView
+        android:id="@+id/totalCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Total Calories"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/totalCarbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/totalCalories"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="82dp"
+        android:text="Total Carbs"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/totalFats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/totalCalories"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="139dp"
+        android:text="Total Fats"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/totalProtein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/totalCalories"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:text="Total Proteins"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/addFood"
         android:layout_width="383dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/mainScreen"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-155dp"
         android:layout_marginBottom="0dp"
         android:gravity="center_vertical|center_horizontal|center"
         android:text="@string/add_food" />
