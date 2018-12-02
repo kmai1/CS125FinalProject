@@ -6,6 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".addFoodScreen">
 
+    <EditText
+        android:id="@+id/inputCalories"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/foodScreen"
+        android:layout_alignBottom="@+id/enterCalories"
+        android:textSize="30sp" />
+    <EditText
+        android:id="@+id/inputCarbs"
+        android:inputType="numberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/foodScreen"
+        android:layout_alignBottom="@+id/enterCarb"
+        android:textSize="30sp" />
+    <EditText
+        android:id="@+id/inputFat"
+        android:inputType="numberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/foodScreen"
+        android:layout_alignBottom="@+id/enterFats"
+        android:textSize="30sp" />
+    <EditText
+        android:id="@+id/inputProtein"
+        android:inputType="numberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/foodScreen"
+        android:layout_alignBottom="@+id/enterProtein"
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/foodScreen"
         android:layout_width="wrap_content"
@@ -13,6 +46,60 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:text="foodScreen"/>
+
+    <TextView
+        android:id="@+id/enterCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:text="Enter Calories:"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/enterCarb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/enterCalories"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:text="Enter Carbs:"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/enterFats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/enterCalories"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:text="Enter Fats:"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/enterProtein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/enterCalories"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="250dp"
+        android:text="Enter Protein:"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/addFood"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="ADD FOOD" />
 
     <Button
         android:id="@+id/customFood"

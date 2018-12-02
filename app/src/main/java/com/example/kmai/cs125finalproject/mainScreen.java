@@ -17,7 +17,7 @@ import java.util.TimerTask;
 public class mainScreen extends AppCompatActivity {
     private static int totalCalories;
     private static double totalFats, totalCarbs, totalProtein;
-    private static List<Food> listOfFoods = new ArrayList<>();
+    private static List<Food> listOfFoods = new ArrayList<Food>();
     public Button addFood;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class mainScreen extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                listOfFoods.add(new Food(100,1.0,1.0,1.0));
+                //listOfFoods.add(new Food(100,1.0,1.0,1.0));
                 updateCalories();
                 updateFat();
                 updateCarbs();
@@ -87,6 +87,13 @@ public class mainScreen extends AppCompatActivity {
         for (int k = 0; k < listOfFoods.size(); k++) {
             totalProtein += listOfFoods.get(k).getProtein();
         }
+    }
+    public static List<Food> getListOfFoods() {
+        return listOfFoods;
+    }
+
+    public static void addListOfFoods(Food insertFood) {
+        listOfFoods.add(insertFood);
     }
 
 }
