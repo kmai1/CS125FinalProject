@@ -18,11 +18,18 @@ public class mainScreen extends AppCompatActivity {
     private static int totalCalories;
     private static double totalFats, totalCarbs, totalProtein;
     private static List<Food> listOfFoods = new ArrayList<Food>();
-    public Button addFood;
+    public Button addFood, reset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
+        reset = findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listOfFoods = new ArrayList<Food>();
+            }
+        });
 
         addFood = findViewById(R.id.addFood);
         addFood.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +44,6 @@ public class mainScreen extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                //listOfFoods.add(new Food(100,1.0,1.0,1.0));
                 updateCalories();
                 updateFat();
                 updateCarbs();

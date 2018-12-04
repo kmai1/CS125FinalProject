@@ -49,10 +49,19 @@
 
     <Button
         android:id="@+id/addFood"
-        android:layout_width="383dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
         android:gravity="center_vertical|center_horizontal|center"
         android:text="@string/add_food" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/addFood"
+        android:text="reset" />
+
 </RelativeLayout>

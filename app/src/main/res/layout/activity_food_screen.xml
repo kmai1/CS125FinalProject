@@ -38,6 +38,26 @@
         android:layout_marginLeft="200dp"
         android:layout_alignBottom="@+id/enterProtein"
         android:textSize="30sp" />
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_alignBottom="@+id/foodName"
+        android:layout_marginLeft="180dp"/>
+
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:text="Food Name:"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/enterCalories"
