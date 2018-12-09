@@ -26,5 +26,6 @@
             android:name=".customFoodScreen"
             android:label="Custom Food"></activity>
     </application>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
 
 </manifest>

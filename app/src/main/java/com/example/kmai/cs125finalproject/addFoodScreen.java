@@ -55,6 +55,12 @@ public class addFoodScreen extends AppCompatActivity {
                     Food createdFood = new Food(inputtedName, inputtedCalories,inputtedCarbs,inputtedFats,inputtedProtein);
                     mainScreen.addListOfFoods(createdFood);
                     switchToMainScreen();
+                    name.setText("");
+                    calories.setText("");
+                    carbs.setText("");
+                    fats.setText("");
+                    fats.setText("");
+                    protein.setText("");
                 }
             }
         });
