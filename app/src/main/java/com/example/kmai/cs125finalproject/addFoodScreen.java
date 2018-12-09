@@ -9,20 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class addFoodScreen extends AppCompatActivity {
-    private Button customFood;
     private Button addFood;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_screen);
-
-        customFood = findViewById(R.id.customFood);
-        customFood.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCustomFoodScreen();
-            }
-        });
 
         addFood = findViewById(R.id.addFood);
         addFood.setOnClickListener(new View.OnClickListener() {
@@ -61,14 +52,11 @@ public class addFoodScreen extends AppCompatActivity {
                     fats.setText("");
                     fats.setText("");
                     protein.setText("");
+                    mainScreen.foodNames.add(inputtedName);
                 }
             }
         });
 
-    }
-    public void openCustomFoodScreen() {
-        Intent intent = new Intent(this, customFoodScreen.class);
-        startActivity(intent);
     }
     public void switchToMainScreen() {
         Intent intent = new Intent(this, mainScreen.class);

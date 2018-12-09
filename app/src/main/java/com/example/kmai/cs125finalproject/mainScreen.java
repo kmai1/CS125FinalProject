@@ -1,50 +1,43 @@
 package com.example.kmai.cs125finalproject;
 
-import android.content.Context;
 import android.content.Intent;
-import android.hardware.SensorManager;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-import android.hardware.Sensor;
 
 import com.github.tbouron.shakedetector.library.ShakeDetector;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class mainScreen extends AppCompatActivity {
     private static int totalCalories;
     private static double totalFats, totalCarbs, totalProtein;
     private static List<Food> listOfFoods = new ArrayList<Food>();
+    public static List<String> foodNames = new ArrayList<String>();
     public Button addFood, reset;
-    private ShakeDetector shakeDetector;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
+        //Shaking Software Library credits to tbouron
         ShakeDetector.create(this, new ShakeDetector.OnShakeListener() {
 
             @Override
             public void OnShake() {
-                Toast.makeText(getApplicationContext(), "Device shaken!", Toast.LENGTH_SHORT).show();
-                openFoodScreen();
+                ShakeDetector.updateConfiguration(1f,1);
+                openFoodName();
             }
 
         });
-        ShakeDetector.updateConfiguration(3f,1);
         reset = findViewById(R.id.reset);
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listOfFoods = new ArrayList<Food>();
+                foodNames = new ArrayList<String>();
             }
         });
 
@@ -81,10 +74,13 @@ public class mainScreen extends AppCompatActivity {
             }
         };
         handler.postDelayed(runnable, 100);
-
     }
     public void openFoodScreen() {
         Intent intent = new Intent(this, addFoodScreen.class);
+        startActivity(intent);
+    }
+    public void openFoodName() {
+        Intent intent = new Intent(this, ListOfFoods.class);
         startActivity(intent);
     }
     public void updateCalories() {

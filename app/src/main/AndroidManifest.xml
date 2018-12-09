@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kmai.cs125finalproject">
 
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,10 +26,9 @@
         <activity
             android:name=".addFoodScreen"
             android:label="Add your food" />
-        <activity
-            android:name=".customFoodScreen"
-            android:label="Custom Food"></activity>
+        <activity android:name=".ListOfFoods"
+            android:label="Your Foods"></activity>
+
     </application>
-    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
 
 </manifest>
